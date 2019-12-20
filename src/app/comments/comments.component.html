@@ -1,0 +1,8 @@
+<h1> Comments </h1>
+
+<ul [@listStagger]="comments">
+  <li *ngFor="let comment of comments, let i = index">
+    {{ comment.id }}. <a routerLink="/info/{{ comment.id }}"> {{ comment.name }} </a>
+    <p><button (click)="deleteItem(i)"> Delete </button></p>
+  </li>
+</ul>

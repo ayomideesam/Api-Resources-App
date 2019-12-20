@@ -1,0 +1,9 @@
+<h1> To-Do's</h1>
+
+<ul [@listStagger]="todos">
+  <li *ngFor="let todo of todos, let i = index">
+    {{ todo.id }}. {{ todo.title }}
+    <p> <span> Status: </span> <a routerLink="todos"> {{ todo.completed }} </a></p>
+    <button (click)="deleteItem(i)"> Delete </button>
+  </li>
+</ul>

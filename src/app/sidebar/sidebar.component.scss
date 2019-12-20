@@ -1,0 +1,33 @@
+nav {
+  background-color: rgba(218, 27, 96, .3);
+  height: 100%;
+  position: fixed;
+  border-radius: 0 8px 8px 0;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+
+      a {
+        color: #fff;
+        padding: 20px;
+        display: block;
+      }
+
+      a.activated {
+        background-image: linear-gradient(to right, #ff8a00, #da1b60);
+        border-radius: 8px;
+      }
+    }
+  }
+}
+.material-icons:hover {
+  background: -webkit-linear-gradient(#ff8a00, #da1b60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 35px;
+}
+

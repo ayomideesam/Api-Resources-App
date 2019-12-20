@@ -1,0 +1,13 @@
+<h1>Users</h1>
+
+<ul *ngIf="users" [@listStagger]="users">
+  <li *ngFor="let user of users; let i = index">
+    <span class="userID"> {{ user.id }}. </span> <a routerLink="/details/{{user.id}}">{{ user.name }}</a>
+
+    <ul>
+      <li class="info">{{ user.email }}</li>
+      <li class="info"><a href=" {{ user.website }} ">{{ user.website }}</a></li>
+    </ul>
+    <button class="deleteButton" (click)="deleteItem(i)"> Delete </button>
+  </li>
+</ul>

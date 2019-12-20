@@ -1,0 +1,10 @@
+<h1> Photos </h1>
+
+<ul [@listStagger]="photos">
+  <li *ngFor="let photo of photos; let i = index">
+    <img [src]=" photo.thumbnailUrl " alt="">
+    <p> {{ photo.title }} </p>
+    <a routerLink="{{ photo.url}}"> {{ photo.url}} </a>
+    <button (click)="deleteItem(i)"> Delete </button>
+  </li>
+</ul>
